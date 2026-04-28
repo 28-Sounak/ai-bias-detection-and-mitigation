@@ -1,6 +1,7 @@
 from google import genai
+from config import GEMINI_API_KEY
 
-client = genai.Client(api_key="AIzaSyC4EFa4Clvi1XE1CFEs7jx2key32c177fE")
+client = genai.Client(api_key=GEMINI_API_KEY)
 
 def explain_bias(rates, di):
     prompt = f"""
