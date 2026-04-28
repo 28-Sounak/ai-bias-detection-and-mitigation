@@ -1,7 +1,10 @@
+import os
 from google import genai
-from config import GEMINI_API_KEY
 
-client = genai.Client(api_key=GEMINI_API_KEY)
+# Get API key from environment (Streamlit Secrets)
+API_KEY = os.getenv("GEMINI_API_KEY")
+
+client = genai.Client(api_key=API_KEY)
 
 def explain_bias(rates, di):
     prompt = f"""
